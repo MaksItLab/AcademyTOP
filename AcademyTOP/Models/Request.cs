@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AcademyTOP.DataAccessLayer.Models
+﻿namespace AcademyTOP.Models
 {
+    /// <summary>
+    /// Класс заявки
+    /// </summary>
     public class Request
     {
         /// <summary>
@@ -31,22 +28,22 @@ namespace AcademyTOP.DataAccessLayer.Models
         /// <summary>
         /// Номер группы студента
         /// </summary>
-        public string NumberGroup { get; set; }
+        public string NumberGroup {  get; set; }
         /// <summary>
         /// Название курса
         /// </summary>
-        public string Block { get; set; }
+        public string Block {  get; set; }
         /// <summary>
         /// Дата пропущенного занятия
         /// </summary>
-        public DateTime DataMiss { get; set; }
+        public DateTime DataMiss {  get; set; }
         /// <summary>
         /// Время, когда студент может придти
         /// </summary>
-        public string FreeTime { get; set; }
+        public string FreeTime {  get; set; }
         /// <summary>
-        /// Название файла справки
+        /// Справка студента
         /// </summary>
-        public string NameFile { get; set; }
+        public IFormFile FormFile { get; set; }
     }
 }

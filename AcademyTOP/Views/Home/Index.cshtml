@@ -1,5 +1,5 @@
 ﻿<main>
-    <form asp-controller="Home" asp-action="GetData" class="form">
+    <form asp-controller="Home" asp-action="Send" class="form" method="post" enctype="multipart/form-data">
         <div class="element form-group">
             <label for="InputName">ФИО ребенка</label>
             <input name="name" type="text" class="form-control" id="InputName" placeholder="Введите ФИО ребенка" required>
@@ -14,7 +14,7 @@
 
         <div class="element form-group">
             <label for="InputGroup">Группа</label>
-            <input name="group" type="text" class="form-control" id="InputGropup" placeholder="Введите название группы" required>
+            <input name="numberGroup" type="text" class="form-control" id="InputGropup" placeholder="Введите название группы" required>
             <small class="form-text text-muted">Например: В3213</small>
         </div>
 
@@ -30,15 +30,15 @@
             </select>
         </div>
 
-        <div class="element form-group">
+        @* <div class="element form-group">
             <label for="InputTheme">Тема</label>
             <input name="theme" type="text" class="form-control" id="InputTheme" placeholder="Введите название пропущенной темы или номер урока" required>
             <small class="form-text text-muted">Например: Введение в SketchUp</small>
         </div>
-
+ *@
         <div class="element form-group">
             <label for="InputDataLess">Когда было пропущено занятие?</label>
-            <input name="dataLose" type="text" class="form-control" id="InputDataLess" placeholder="Введите даты занятий" required>
+            <input name="dataMiss" type="text" class="form-control" id="InputDataLess" placeholder="Введите даты занятий" required>
             <small class="form-text text-muted">Например: 20.03.24</small>
         </div>
 
@@ -49,8 +49,9 @@
         </div>
 
         <div class="element form-group">
+
             <label for="FormControlFile">Прикрепите справку из больницы(фото):</label><br><br>
-            <input name="file" type="file" class="form-control-file" id="FormControlFile" required>
+            <input name="formFile" type="file" class="form-control-file" id="file" required>
         </div>
 
 
